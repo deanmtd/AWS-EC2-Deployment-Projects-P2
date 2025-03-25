@@ -5,29 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS EC2 Features Portfolio</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #232f3e;
-            color: white;
-            padding: 30px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS EC2 Features Portfolio</title>
-    <style>
         :root {
             --aws-orange: #FF9900;
             --aws-dark: #232F3E;
@@ -108,40 +85,39 @@
             border: 1px solid var(--aws-border);
         }
         
-        .toc {
-            background-color: #f1f8ff;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-bottom: 2rem;
+        .image-container {
+            margin: 1.5rem 0;
+            text-align: center;
         }
         
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .toc li {
-            margin-bottom: 8px;
-        }
-        
-        .toc a {
-            color: var(--aws-link);
-            text-decoration: none;
-        }
-        
-        .toc a:hover {
-            color: var(--aws-link-hover);
-            text-decoration: underline;
-        }
-        
-        img {
+        .image-container img {
             max-width: 100%;
-            height: auto;
             border: 1px solid var(--aws-border);
             border-radius: 5px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin: 1.5rem 0;
-            display: block;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .skill-badge {
+            background-color: var(--aws-dark);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            background-color: var(--aws-dark);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -149,39 +125,30 @@
     <header>
         <div class="container">
             <h1>AWS EC2 Features Portfolio</h1>
+            <p>Hands-on Exploration of Amazon EC2 Capabilities</p>
         </div>
     </header>
-
+    
     <div class="container">
-        <div class="toc">
-            <h2>Table of Contents</h2>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#ip-address-behavior">IP Address Behavior in EC2</a></li>
-                <li><a href="#elastic-ip">Elastic IP Configuration</a></li>
-                <li><a href="#placement-groups">EC2 Placement Groups</a></li>
-                <li><a href="#elastic-network-interfaces">Elastic Network Interfaces (ENIs)</a></li>
-                <li><a href="#ec2-hibernate">EC2 Hibernate Feature</a></li>
-                <li><a href="#conclusion">Conclusion</a>
-            </ul>
-        </div>
-
         <div class="section">
-            <h2 id="introduction">Introduction</h2>
+            <h2>Introduction</h2>
             <p>This portfolio demonstrates hands-on experience with key Amazon EC2 features. Each section documents a practical implementation of different EC2 capabilities, including IP addressing, placement strategies, network interfaces, and hibernation. These demonstrations highlight my ability to configure and optimize EC2 instances for various real-world scenarios.</p>
+            
+            <div class="skills-list">
+                <span class="skill-badge">IP Addressing</span>
+                <span class="skill-badge">Elastic IPs</span>
+                <span class="skill-badge">Placement Groups</span>
+                <span class="skill-badge">Network Interfaces</span>
+                <span class="skill-badge">Instance Hibernation</span>
+                <span class="skill-badge">AWS Networking</span>
+            </div>
         </div>
 
-        <!-- Rest of the original content remains the same, just wrapped in <div class="section"> -->
         <div class="section">
-            <h2 id="ip-address-behavior">IP Address Behavior in EC2</h2>
+            <h2>IP Address Behavior in EC2</h2>
             <h3>Demonstration Overview</h3>
-            <p>In this demonstration, I explored the behavior of public and private IP addresses in EC2 instances, specifically focusing on:</p>
-            <ul>
-                <li>Connecting to instances using public vs. private IPs</li>
-                <li>Observing IP address changes during instance restart cycles</li>
-            </ul>
-
-            <!-- Rest of IP Address Behavior section content -->
+            <p>In this demonstration, I explored the behavior of public and private IP addresses in EC2 instances, specifically focusing on: - Connecting to instances using public vs. private IPs - Observing IP address changes during instance restart cycles</p>
+            
             <h3>Implementation Steps</h3>
             <ol>
                 <li>Launched an EC2 instance with both public and private IPv4 addresses</li>
@@ -191,305 +158,119 @@
                 <li>Documented the public IPv4 address change while the private IPv4 remained static</li>
             </ol>
 
-            <img src="Images/public-ip-connection.png" alt="Public IP Connection" width="400">
-            <img src="Images/ip-address-change.png" alt="IP Address Change" width="400">
-
-            <!-- Remaining sections follow the same pattern -->
-        </div>
-
-        <!-- Repeat for other sections: Elastic IP, Placement Groups, ENIs, Hibernate, Conclusion -->
-        <!-- Each wrapped in <div class="section"> -->
-        <div class="section">
-            <h2 id="elastic-ip">Elastic IP Configuration</h2>
-            <!-- Elastic IP section content -->
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="IP Address Demonstration">
+                <p><em>Public and Private IP Address Behavior in EC2</em></p>
+            </div>
         </div>
 
         <div class="section">
-            <h2 id="placement-groups">EC2 Placement Groups</h2>
-            <!-- Placement Groups section content -->
+            <h2>Elastic IP Configuration</h2>
+            <h3>Demonstration Overview</h3>
+            <p>This demonstration addressed the limitation of changing public IP addresses by implementing Elastic IPs, focusing on: - Allocating and associating Elastic IPs with EC2 instances - Testing IP persistence during instance stop/start cycles - Understanding Elastic IP pricing implications</p>
+            
+            <h3>Implementation Steps</h3>
+            <ol>
+                <li>Allocated a new Elastic IP from Amazon's IPv4 address pool</li>
+                <li>Associated the Elastic IP with a running EC2 instance</li>
+                <li>Confirmed the public IPv4 address now matched the Elastic IP value</li>
+                <li>Stopped and restarted the instance</li>
+                <li>Verified the public IPv4 address remained unchanged</li>
+                <li>Disassociated and released the Elastic IP to avoid charges</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="Elastic IP Configuration">
+                <p><em>Elastic IP Association and Persistence</em></p>
+            </div>
         </div>
 
         <div class="section">
-            <h2 id="elastic-network-interfaces">Elastic Network Interfaces (ENIs)</h2>
-            <!-- ENIs section content -->
+            <h2>EC2 Placement Groups</h2>
+            <h3>Demonstration Overview</h3>
+            <p>In this demonstration, I configured different placement group strategies to optimize instance placement according to specific requirements: - Cluster placement for high-performance computing - Spread placement for critical applications - Partition placement for distributed workloads</p>
+            
+            <h3>Implementation Steps</h3>
+            <ol>
+                <li>Created three different placement groups:
+                    <ul>
+                        <li><code>my-high-performance-group</code> using the cluster strategy</li>
+                        <li><code>my-critical-group</code> using the spread strategy (rack level)</li>
+                        <li><code>my-distributed-group</code> using the partition strategy (4 partitions)</li>
+                    </ul>
+                </li>
+                <li>Demonstrated how to launch instances within each placement group</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="EC2 Placement Groups">
+                <p><em>Different Placement Group Strategies</em></p>
+            </div>
         </div>
 
         <div class="section">
-            <h2 id="ec2-hibernate">EC2 Hibernate Feature</h2>
-            <!-- Hibernate section content -->
+            <h2>Elastic Network Interfaces (ENIs)</h2>
+            <h3>Demonstration Overview</h3>
+            <p>This demonstration explored the creation and management of Elastic Network Interfaces for advanced networking capabilities: - Creating and attaching custom ENIs to EC2 instances - Implementing network failover by moving ENIs between instances - Understanding ENI lifecycle management</p>
+            
+            <h3>Implementation Steps</h3>
+            <ol>
+                <li>Launched two EC2 instances, each with a primary network interface</li>
+                <li>Created a custom ENI with a description "demo ENI"</li>
+                <li>Selected an appropriate subnet and security group</li>
+                <li>Attached the custom ENI to one EC2 instance, providing a secondary private IP</li>
+                <li>Detached the ENI from the first instance (using force detach)</li>
+                <li>Re-attached the ENI to the second instance</li>
+                <li>Terminated both instances and observed ENI behavior</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="Elastic Network Interfaces">
+                <p><em>Custom ENI Creation and Management</em></p>
+            </div>
         </div>
 
         <div class="section">
-            <h2 id="conclusion">Conclusion</h2>
+            <h2>EC2 Hibernate Feature</h2>
+            <h3>Demonstration Overview</h3>
+            <p>This demonstration implemented and tested EC2 hibernation to preserve instance state between stop/start cycles: - Configuring hibernation requirements - Testing the preservation of RAM state - Verifying hibernation using the uptime command</p>
+            
+            <h3>Implementation Steps</h3>
+            <ol>
+                <li>Launched an EC2 instance with hibernate behavior enabled</li>
+                <li>Ensured the root EBS volume was encrypted</li>
+                <li>Verified adequate storage for RAM contents (8GB volume > 1GB RAM)</li>
+                <li>Connected to the instance and ran the uptime command</li>
+                <li>Hibernated the instance</li>
+                <li>Started the instance again</li>
+                <li>Verified that uptime continued from before hibernation</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="/api/placeholder/800/400" alt="EC2 Hibernation">
+                <p><em>Instance State Preservation through Hibernation</em></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
             <p>This portfolio demonstrates practical experience with key AWS EC2 features that are essential for designing robust cloud infrastructure. Through these hands-on demonstrations, I've developed skills in:</p>
+            
             <ul>
                 <li>Managing IP addressing and connectivity</li>
                 <li>Optimizing instance placement for performance and availability</li>
                 <li>Implementing advanced networking through ENIs</li>
                 <li>Utilizing hibernation for state preservation</li>
             </ul>
+            
             <p>These capabilities enable the creation of EC2-based solutions that are reliable, performant, and cost-effective for a wide range of business applications.</p>
         </div>
     </div>
-</body>
-</html>
-        h1 {
-            color: #0073bb;
-            border-bottom: 3px solid #ff9900;
-            padding-bottom: 15px;
-            margin-top: 0;
-        }
-        h2 {
-            color: #232f3e;
-            border-bottom: 2px solid #ff9900;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        h3 {
-            color: #0073bb;
-            margin-top: 25px;
-        }
-        .toc {
-            background-color: #f1f8ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .toc li {
-            margin-bottom: 8px;
-        }
-        .toc a {
-            color: #0073bb;
-            text-decoration: none;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
-            margin: 15px 0;
-            display: block;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="toc">
-        <h2>Table of Contents</h2>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#ip-address-behavior">IP Address Behavior in EC2</a></li>
-            <li><a href="#elastic-ip">Elastic IP Configuration</a></li>
-            <li><a href="#placement-groups">EC2 Placement Groups</a></li>
-            <li><a href="#elastic-network-interfaces">Elastic Network Interfaces (ENIs)</a></li>
-            <li><a href="#ec2-hibernate">EC2 Hibernate Feature</a></li>
-            <li><a href="#conclusion">Conclusion</a>
-        </ul>
-    </div>
-
-    <h1>AWS EC2 Features Portfolio</h1>
-
-    <h2 id="introduction">Introduction</h2>
-    <p>This portfolio demonstrates hands-on experience with key Amazon EC2 features. Each section documents a practical implementation of different EC2 capabilities, including IP addressing, placement strategies, network interfaces, and hibernation. These demonstrations highlight my ability to configure and optimize EC2 instances for various real-world scenarios.</p>
-
-    <h2 id="ip-address-behavior">IP Address Behavior in EC2</h2>
-    <h3>Demonstration Overview</h3>
-    <p>In this demonstration, I explored the behavior of public and private IP addresses in EC2 instances, specifically focusing on:</p>
-    <ul>
-        <li>Connecting to instances using public vs. private IPs</li>
-        <li>Observing IP address changes during instance restart cycles</li>
-    </ul>
-
-    <h3>Implementation Steps</h3>
-    <ol>
-        <li>Launched an EC2 instance with both public and private IPv4 addresses</li>
-        <li>Successfully connected to the instance using the public IPv4 address via SSH</li>
-        <li>Attempted (unsuccessfully) to connect using the private IPv4 address from outside the AWS network</li>
-        <li>Stopped and restarted the instance to observe IP address behavior</li>
-        <li>Documented the public IPv4 address change while the private IPv4 remained static</li>
-    </ol>
-
-    <img src="Images/public-ip-connection.png" alt="Public IP Connection" width="400">
-    <img src="Images/ip-address-change.png" alt="IP Address Change" width="400">
-
-    <h3>Key Findings</h3>
-    <ul>
-        <li>Public IPv4 addresses are required for external internet connectivity</li>
-        <li>Private IPv4 addresses only work within the AWS network environment</li>
-        <li>When an instance is stopped and started, it receives a new public IPv4 address, private IPv4 addresses remain unchanged through stop/start cycles</li>
-    </ul>
-
-    <h3>Business Application</h3>
-    <p>This knowledge is critical for designing reliable network architectures in AWS. Understanding IP address persistence helps avoid connectivity issues when instances undergo maintenance cycles.</p>
-
-    <h2 id="elastic-ip">Elastic IP Configuration</h2>
-    <h3>Demonstration Overview</h3>
-    <p>This demonstration addressed the limitation of changing public IP addresses by implementing Elastic IPs, focusing on:</p>
-    <ul>
-        <li>Allocating and associating Elastic IPs with EC2 instances</li>
-        <li>Testing IP persistence during instance stop/start cycles</li>
-        <li>Understanding Elastic IP pricing implications</li>
-    </ul>
-
-    <h3>Implementation Steps</h3>
-    <ol>
-        <li>Allocated a new Elastic IP from Amazon's IPv4 address pool</li>
-        <li>Associated the Elastic IP with a running EC2 instance</li>
-        <li>Confirmed the public IPv4 address now matched the Elastic IP value</li>
-        <li>Stopped and restarted the instance</li>
-        <li>Verified the public IPv4 address remained unchanged</li>
-        <li>Disassociated and released the Elastic IP to avoid charges</li>
-    </ol>
-
-    <img src="Images/elastic-ip-allocation.png" alt="Elastic IP Allocation" width="400">
-    <img src="Images/elastic-ip-association.png" alt="Elastic IP Association" width="400">
-
-    <h3>Key Findings</h3>
-    <ul>
-        <li>Elastic IPs provide persistent, static public IP addresses</li>
-        <li>These IPs remain associated with instances through stop/start cycles</li>
-        <li>Unused Elastic IPs incur charges (~$3.50/month)</li>
-        <li>AWS Free Tier includes 750 hours per month of public IPv4 addresses</li>
-    </ul>
-
-    <h3>Business Application</h3>
-    <p>Elastic IPs are essential for services requiring constant accessibility through a fixed address, such as public-facing web applications, DNS configurations, and services with strict firewall rules.</p>
-
-    <h2 id="placement-groups">EC2 Placement Groups</h2>
-    <h3>Demonstration Overview</h3>
-    <p>In this demonstration, I configured different placement group strategies to optimize instance placement according to specific requirements:</p>
-    <ul>
-        <li>Cluster placement for high-performance computing</li>
-        <li>Spread placement for critical applications</li>
-        <li>Partition placement for distributed workloads</li>
-    </ul>
-
-    <h3>Implementation Steps</h3>
-    <ol>
-        <li>Created three different placement groups:
-            <ul>
-                <li><code>my-high-performance-group</code> using the cluster strategy</li>
-                <li><code>my-critical-group</code> using the spread strategy (rack level)</li>
-                <li><code>my-distributed-group</code> using the partition strategy (4 partitions)</li>
-            </ul>
-        </li>
-        <li>Demonstrated how to launch instances within each placement group</li>
-    </ol>
-
-    <img src="Images/placement-groups-creation.png" alt="Placement Groups Creation" width="400">
-    <img src="Images/placement-groups-launch.png" alt="Placement Groups Launch" width="400">
-
-    <h3>Key Findings</h3>
-    <ul>
-        <li>Cluster placement groups: Position instances close together for maximum network performance</li>
-        <li>Spread placement groups: Distribute instances across separate racks for maximum availability</li>
-        <li>Partition placement groups: Group instances into logical partitions, useful for distributed applications</li>
-    </ul>
-
-    <h3>Business Application</h3>
-    <p>Proper placement group selection directly impacts application performance and availability:</p>
-    <ul>
-        <li>High-Performance Computing (HPC) and low-latency applications benefit from cluster placement</li>
-        <li>Critical applications requiring high availability benefit from spread placement</li>
-        <li>Large distributed applications (Hadoop, Cassandra) benefit from partition placement</li>
-    </ul>
-
-    <h2 id="elastic-network-interfaces">Elastic Network Interfaces (ENIs)</h2>
-    <h3>Demonstration Overview</h3>
-    <p>This demonstration explored the creation and management of Elastic Network Interfaces for advanced networking capabilities:</p>
-    <ul>
-        <li>Creating and attaching custom ENIs to EC2 instances</li>
-        <li>Implementing network failover by moving ENIs between instances</li>
-        <li>Understanding ENI lifecycle management</li>
-    </ul>
-
-    <h3>Implementation Steps</h3>
-    <ol>
-        <li>Launched two EC2 instances, each with a primary network interface</li>
-        <li>Created a custom ENI with a description "demo ENI"</li>
-        <li>Selected an appropriate subnet and security group</li>
-        <li>Attached the custom ENI to one EC2 instance, providing a secondary private IP</li>
-        <li>Detached the ENI from the first instance (using force detach)</li>
-        <li>Re-attached the ENI to the second instance</li>
-        <li>Terminated both instances and observed ENI behavior; with both instances terminated, the Demo ENI persisted and was not removed / deleted</li>
-    </ol>
-
-    <img src="Images/eni-creation.png" alt="ENI Creation" width="400">
-    <img src="Images/eni-attachment.png" alt="ENI Attachment" width="400">
-
-    <h3>Key Findings</h3>
-    <ul>
-        <li>Custom ENIs persist independently of instance lifecycle</li>
-        <li>ENIs can be moved between instances to facilitate network failover</li>
-        <li>ENIs created alongside instances are automatically deleted when instances terminate</li>
-        <li>Custom ENIs provide greater control over private IPv4 addressing</li>
-    </ul>
-
-    <h3>Business Application</h3>
-    <p>ENIs enable sophisticated networking scenarios such as:</p>
-    <ul>
-        <li>Creating management networks separated from application traffic</li>
-        <li>Implementing network failover for high-availability workloads</li>
-        <li>Attaching multiple security groups to a single instance</li>
-        <li>Preserving IP addresses during instance replacement</li>
-    </ul>
-
-    <h2 id="ec2-hibernate">EC2 Hibernate Feature</h2>
-    <h3>Demonstration Overview</h3>
-    <p>This demonstration implemented and tested EC2 hibernation to preserve instance state between stop/start cycles:</p>
-    <ul>
-        <li>Configuring hibernation requirements</li>
-        <li>Testing the preservation of RAM state</li>
-        <li>Verifying hibernation using the uptime command</li>
-    </ul>
-
-    <h3>Implementation Steps</h3>
-    <ol>
-        <li>Launched an EC2 instance with hibernate behavior enabled</li>
-        <li>Ensured the root EBS volume was encrypted</li>
-        <li>Verified adequate storage for RAM contents (8GB volume > 1GB RAM)</li>
-        <li>Connected to the instance and ran the uptime command</li>
-        <li>Hibernated the instance</li>
-        <li>Started the instance again</li>
-        <li>Verified that uptime continued from before hibernation</li>
-    </ol>
-
-    <img src="Images/hibernate-configuration.png" alt="Hibernate Configuration" width="400">
-    <img src="Images/uptime-verification.png" alt="Uptime Verification" width="400">
-
-    <h3>Key Findings</h3>
-    <ul>
-        <li>Hibernation preserves the instance's RAM state on the EBS volume</li>
-        <li>From the OS perspective, hibernation is not a full shutdown</li>
-        <li>Hibernation requires an encrypted root volume</li>
-        <li>The root volume must have sufficient space to store RAM contents</li>
-    </ul>
-
-    <h3>Business Application</h3>
-    <p>Hibernation provides valuable capabilities for:</p>
-    <ul>
-        <li>Preserving application state without keeping instances running</li>
-        <li>Reducing startup time for complex applications</li>
-        <li>Maintaining long-running processes through instance stops</li>
-        <li>Pre-warming applications to avoid cold starts</li>
-    </ul>
-
-    <h2 id="conclusion">Conclusion</h2>
-    <p>This portfolio demonstrates practical experience with key AWS EC2 features that are essential for designing robust cloud infrastructure. Through these hands-on demonstrations, I've developed skills in:</p>
-    <ul>
-        <li>Managing IP addressing and connectivity</li>
-        <li>Optimizing instance placement for performance and availability</li>
-        <li>Implementing advanced networking through ENIs</li>
-        <li>Utilizing hibernation for state preservation</li>
-    </ul>
-    <p>These capabilities enable the creation of EC2-based solutions that are reliable, performant, and cost-effective for a wide range of business applications.</p>
+    
+    <footer>
+        <div class="container">
+            <p>AWS EC2 Features Portfolio &copy; 2025</p>
+        </div>
+    </footer>
 </body>
 </html>
