@@ -154,7 +154,9 @@
                 <li>Launched an EC2 instance with both public and private IPv4 addresses</li>
                 <li>Successfully connected to the instance using the public IPv4 address via SSH</li>
                 <li>Attempted (unsuccessfully) to connect using the private IPv4 address from outside the AWS network</li>
-                <li>Stopped and restarted the instance to observe IP address behavior</li>
+				<img src="Images/privateIP_SSHfailed.png" alt="AWS Screenshot" width="400">
+                <li>Stopped and restarted the instance to observe IP address behavior; public IP before stopping: "56.228.28.163"; after staring it: "13.61.2.30"</li>
+				<img src="Images/SSHsuccessful.png" alt="AWS Screenshot" width="400">
                 <li>Documented the public IPv4 address change while the private IPv4 remained static</li>
             </ol>
 
@@ -174,8 +176,12 @@
                 <li>Allocated a new Elastic IP from Amazon's IPv4 address pool</li>
                 <li>Associated the Elastic IP with a running EC2 instance</li>
                 <li>Confirmed the public IPv4 address now matched the Elastic IP value</li>
+				<img src="Images/elasticIPAssociatedEC2.png" alt="AWS Screenshot" width="400">
+				<img src="Images/eleasticIP_SSH.png" alt="AWS Screenshot" width="400">
                 <li>Stopped and restarted the instance</li>
+				<img src="Images/ec2Stopped.png" alt="AWS Screenshot" width="400">
                 <li>Verified the public IPv4 address remained unchanged</li>
+				<img src="Images/eleasticIP_Unchanged.png" alt="AWS Screenshot" width="400">
                 <li>Disassociated and released the Elastic IP to avoid charges</li>
             </ol>
 
