@@ -160,10 +160,7 @@
                 <li>Documented the public IPv4 address change while the private IPv4 remained static</li>
             </ol>
 
-            <div class="image-container">
-                <img src="/api/placeholder/800/400" alt="IP Address Demonstration">
-                <p><em>Public and Private IP Address Behavior in EC2</em></p>
-            </div>
+            
         </div>
 
         <div class="section">
@@ -177,6 +174,7 @@
                 <li>Associated the Elastic IP with a running EC2 instance</li>
                 <li>Confirmed the public IPv4 address now matched the Elastic IP value</li>
 				<img src="Images/elasticIPAssociatedEC2.png" alt="AWS Screenshot" width="400">
+				<li>.</li>
 				<img src="Images/eleasticIP_SSH.png" alt="AWS Screenshot" width="400">
                 <li>Stopped and restarted the instance</li>
 				<img src="Images/ec2Stopped.png" alt="AWS Screenshot" width="400">
@@ -185,10 +183,7 @@
                 <li>Disassociated and released the Elastic IP to avoid charges</li>
             </ol>
 
-            <div class="image-container">
-                <img src="/api/placeholder/800/400" alt="Elastic IP Configuration">
-                <p><em>Elastic IP Association and Persistence</em></p>
-            </div>
+
         </div>
 
         <div class="section">
@@ -203,15 +198,14 @@
                         <li><code>my-high-performance-group</code> using the cluster strategy</li>
                         <li><code>my-critical-group</code> using the spread strategy (rack level)</li>
                         <li><code>my-distributed-group</code> using the partition strategy (4 partitions)</li>
+						<img src="Images/myPlacementGroups.png" alt="AWS Screenshot" width="400">
                     </ul>
                 </li>
                 <li>Demonstrated how to launch instances within each placement group</li>
+				<img src="Images/selectMyPlacementGroups.png" alt="AWS Screenshot" width="400">
             </ol>
 
-            <div class="image-container">
-                <img src="/api/placeholder/800/400" alt="EC2 Placement Groups">
-                <p><em>Different Placement Group Strategies</em></p>
-            </div>
+
         </div>
 
         <div class="section">
@@ -224,16 +218,16 @@
                 <li>Launched two EC2 instances, each with a primary network interface</li>
                 <li>Created a custom ENI with a description "demo ENI"</li>
                 <li>Selected an appropriate subnet and security group</li>
+				<img src="Images/demoENI.png" alt="AWS Screenshot" width="400"> 
                 <li>Attached the custom ENI to one EC2 instance, providing a secondary private IP</li>
-                <li>Detached the ENI from the first instance (using force detach)</li>
-                <li>Re-attached the ENI to the second instance</li>
-                <li>Terminated both instances and observed ENI behavior</li>
+				<img src="Images/attachENI.png" alt="AWS Screenshot" width="400"> 
+                <li>During a failover scenario, the ENI and can be detached from the one instace, and then attached to the second instance (using force detach)</li>
+				<li>Attached the custom ENI to my second instance</li>
+				<img src="Images/attachedENI.png" alt="AWS Screenshot" width="400"> 
+                <li>Terminated both instances and observed ENI behavior; the demoENI remains, allowing you to re-use for future use cases and more control over ENI assignements</li>
             </ol>
 
-            <div class="image-container">
-                <img src="/api/placeholder/800/400" alt="Elastic Network Interfaces">
-                <p><em>Custom ENI Creation and Management</em></p>
-            </div>
+           
         </div>
 
         <div class="section">
@@ -246,16 +240,17 @@
                 <li>Launched an EC2 instance with hibernate behavior enabled</li>
                 <li>Ensured the root EBS volume was encrypted</li>
                 <li>Verified adequate storage for RAM contents (8GB volume > 1GB RAM)</li>
+				<img src="Images/encryptEBSVolume.png" alt="AWS Screenshot" width="400"> 
                 <li>Connected to the instance and ran the uptime command</li>
+				<img src="Images/uptimeB4Hibernate.png" alt="AWS Screenshot" width="400"> 
                 <li>Hibernated the instance</li>
+				<img src="Images/Hibernating.png" alt="AWS Screenshot" width="400">
                 <li>Started the instance again</li>
                 <li>Verified that uptime continued from before hibernation</li>
+				<img src="Images/uptimeAfterHibernate.png" alt="AWS Screenshot" width="400">
             </ol>
 
-            <div class="image-container">
-                <img src="/api/placeholder/800/400" alt="EC2 Hibernation">
-                <p><em>Instance State Preservation through Hibernation</em></p>
-            </div>
+
         </div>
 
         <div class="section">
